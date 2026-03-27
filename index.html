@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3i Consultancy | Governance & Public Sector Consulting</title>
+  <meta name="description" content="3i Consultancy is a governance and public sector consulting firm providing advisory services, technical assistance, and capacity building to governments and public institutions." />
+  <style>
+    :root {
+      --primary: #163a63;
+      --accent: #2b8c9e;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .btn:hover { opacity: 0.92; }
+
+    .hero {
+      padding: 88px 0 72px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 720px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    .stat {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat:last-child { border-bottom: none; }
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: var(--primary);
+      margin: 0 0 14px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 0 0 34px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .service h3,
+    .expertise h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .approach-box {
+      border-left: 4px solid var(--accent);
+    }
+
+    .contact {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 22px;
+      padding: 42px;
+    }
+
+    .contact h2,
+    .contact p,
+    .contact a { color: var(--white); }
+
+    footer {
+      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <div class="logo">3i</div>
+        <div>
+          <div>3i Consultancy</div>
+          <small style="color:#64748b;font-weight:400;">Governance & Public Sector Consulting</small>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Governance & Public Sector Consulting</div>
+          <h1>Strengthening institutions. Delivering impact.</h1>
+          <p>
+            3i Consultancy supports governments and public institutions through technical assistance,
+            strategic advisory, and capacity building designed to improve performance, accountability,
+            and sustainable public sector outcomes.
+          </p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="card">
+          <div class="stat">
+            <strong>Technical Assistance</strong>
+            Tailored support for institutional systems, public administration, and reform implementation.
+          </div>
+          <div class="stat">
+            <strong>Advisory Services</strong>
+            Strategic guidance on governance, policy, and public sector performance.
+          </div>
+          <div class="stat">
+            <strong>Capacity Building</strong>
+            Practical training and institutional strengthening for long-term results.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-intro">
+          3i Consultancy is a governance and public sector consulting firm working with governments,
+          public institutions, and development partners to strengthen institutions and improve service delivery.
+          Our work combines policy insight, technical rigor, and practical implementation support.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-intro">
+          We provide specialized support across the full policy and implementation cycle.
+        </p>
+        <div class="grid-3">
+          <div class="card service">
+            <h3>Technical Assistance</h3>
+            <p>Support to improve operational systems, institutional processes, and implementation capacity.</p>
+          </div>
+          <div class="card service">
+            <h3>Policy & Governance Advisory</h3>
+            <p>Strategic advisory on governance reform, institutional effectiveness, and public sector priorities.</p>
+          </div>
+          <div class="card service">
+            <h3>Capacity Building & Training</h3>
+            <p>Targeted training and knowledge transfer to strengthen capabilities within public institutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="grid-2">
+          <div class="card expertise">
+            <h3>Core Expertise</h3>
+            <ul class="clean">
+              <li>Governance and institutional reform</li>
+              <li>Public financial management</li>
+              <li>Policy analysis and design</li>
+              <li>Public administration improvement</li>
+            </ul>
+          </div>
+          <div class="card expertise">
+            <h3>Applied Focus</h3>
+            <ul class="clean">
+              <li>Public investment planning</li>
+              <li>Transparency and accountability systems</li>
+              <li>Capacity building for public institutions</li>
+              <li>Evidence-based decision support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container">
+        <h2 class="section-title">Our Approach</h2>
+        <div class="card approach-box">
+          <p>
+            We work closely with clients to design tailored, context-sensitive solutions that are practical,
+            evidence-based, and implementation-oriented. Our approach combines analytical rigor with a clear
+            focus on sustainable institutional results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <h2 class="section-title" style="margin-top:0;">Get in Touch</h2>
+          <p>
+            We work with governments, public institutions, and development partners.
+            For collaboration opportunities or inquiries, contact us at:
+          </p>
+          <p><strong>Email:</strong> yourname@yourcompany.com</p>
+          <p><strong>Location:</strong> Tunisia / International</p>
+          <p><a class="btn" href="mailto:yourname@yourcompany.com" style="background:#ffffff;color:#163a63;">Email Us</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 3i Consultancy. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
